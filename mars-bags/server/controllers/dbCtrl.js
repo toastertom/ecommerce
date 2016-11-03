@@ -4,7 +4,7 @@ var db = app.get('db');
 //read_products
 module.exports = {
     readProducts: function(){
-        db.read_products([25], function(err, products){
+        db.read_products([10], function(err, products){
             console.log(err, products);
         })
     }

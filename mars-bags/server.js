@@ -28,6 +28,9 @@ app.set('db', massiveInstance);
 
 //db read all products endpoint
 app.get('/api/products', dbCtrl.readProducts);
+app.get('/api/products/create', dbCtrl.createProduct);
+app.get('/api/products/update', dbCtrl.updateProduct);
+app.get('/api/products/delete', dbCtrl.deleteProduct);
 
 app.listen( config.portNum, function(){
   console.log("Successfully listening");
