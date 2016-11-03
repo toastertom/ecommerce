@@ -1,0 +1,1 @@
+insert into products (name, type, description, price)values ('Apollo', 'Duffle','Whether it be on the back of a motorcycle or used to carry your gear to the slopes the Apollo is suited for any environment and has the space you need for any adventure.', 99.99);
