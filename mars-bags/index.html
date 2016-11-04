@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="mars-bags">
+  <head>
+    <meta charset="utf-8">
+    <title>Mars Bags</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+  <link rel="stylesheet" href="public/styles/navBarStyles.css">
+  <link rel="stylesheet" href="public/styles/homeStyles.css">
+  <link rel="stylesheet" href="public/styles/shopStyles.css">
+  </head>
+
+  <body>
+
+    <nav class="nav-bar">
+        <div id="logo"><a ui-sref="home">Logo</a></div>
+        <div id="links">
+          <ul>
+            <li><a ui-sref="shop">Shop</a></li>
+            <li><a ui-sref="about">About Us</a></li>
+            <li><a ui-sref="news-events">News &amp Events</a></li>
+            <li><a ui-sref="charity-water">Charity Water</a></li>
+            <li><button id="contact-box" ui-sref="contact-us">Contact Us</button></li>
+          </ul>
+        </div>
+    </nav>
+
+    <ui-view></ui-view>
+
+  <script src="
+    https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+  <script src="public/js/app.js"></script>
+  <!-- <script src="js/mainCtrl.js"></script> -->
+  <!-- <script src="js/serviceHttp.js"></script> -->
+  </body>
+</html>
