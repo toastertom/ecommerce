@@ -3,7 +3,8 @@ angular.module('mars-bags', ['ui.router'])
         $stateProvider
             .state('home',{
                 url:'/',
-                templateUrl: "public/views/homeTpl.html"
+                templateUrl: "public/views/homeTpl.html",
+                controller:'mainCtrl'
             })
             .state('shop',{
               url:'/shop',
