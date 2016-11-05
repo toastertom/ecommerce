@@ -5,12 +5,14 @@
     <title>Mars Bags</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
   <link rel="stylesheet" href="public/styles/navBarStyles.css">
-  <link rel="stylesheet" href="public/styles/homeStyles.css">
-  <link rel="stylesheet" href="public/styles/shopStyles.css">
+  <link rel="stylesheet" href="public/styles/footerStyle.css">
+  <link rel="stylesheet" href="public/styles/homeStyle.css">
+  <link rel="stylesheet" href="public/styles/shopStyle.css">
+    <link rel="stylesheet" href="public/styles/aboutStyle.css">
   </head>
 
   <body>
-
+    <!-- Header -->
     <nav class="nav-bar">
         <div id="logo"><a ui-sref="home">Logo</a></div>
         <div id="links">
@@ -24,7 +26,30 @@
         </div>
     </nav>
 
+    <!-- Content -->
     <ui-view></ui-view>
+
+
+    <!-- Footer -->
+    <footer>
+      <div id="footer-top">
+        <ul>
+          <li><a ui-sref="contact-us">Contact Us</a></li>
+          <li><a ui-sref="charity-water">Donate</a></li>
+          <li><a ui-sref="about">About The Company</a></li>
+        </ul>
+        <ul>
+          <li><a ui-sref="news-events">News &amp Events</a></li>
+          <li><a ui-sref="charity-water">Charity Water</a></li>
+          <li><a ui-sref="terms-conditions">Terms &amp Conditions</a></li>
+        </ul>
+      </div>
+
+
+      <div id="footer-bottom">
+        <p>Mars Bags LLC, Logan Utah</p>
+      </div>
+    </footer>
 
   <script src="
     https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>

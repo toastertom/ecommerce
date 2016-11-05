@@ -2,20 +2,23 @@ body {
   font-family: helvetica neue;
   margin: 0px;
   width: 100%;
+  background-color: #fff;
 
 }
 nav {
-  background-color: rgba(32, 26, 22, 0.9);
+  background-color: transparent);
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   position: fixed;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 #logo {
   width: 300px;
   height: 80px;
-  background-color: #201A16;
+  background-color: transparent;;
   color: #fff;
 
 }

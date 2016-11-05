@@ -1,5 +1,23 @@
-Home
-<div class="Jumbo">
+
+<div id="jumbo">
+  <div id="jumbo-container">
   <h3>Mars Bags</h3>
-  <h1>Don't let a little water hold you back.</h1>
+  <h1>Don't let a little water hold<br> you back.</h1>
+  <button id="shop-button" ui-sref="shop">Shop Collection</button>
+  </div>
+</div>
+
+<div class="container">
+  <div id="card" ng-repeat="item in products">
+    <div>{{item.image}}</div>
+    <div>
+      <h2>{{item.name}}</h2>
+      <p>{{item.description}} <br> {{item.price}}</p>
+
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
 </div>

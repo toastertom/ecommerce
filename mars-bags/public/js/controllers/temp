@@ -1,0 +1,2 @@
+$http.post({data:['product','food','whatever'....])
+$http.post({name:'name',type:"food"...})

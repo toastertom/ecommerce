@@ -1,32 +1,40 @@
 var app = require('../../server.js');
 var db = app.get('db');
 
-//read_products
+//Get all Items
 module.exports = {
-    readProducts: function(){
-        db.read_products([10], function(err, products){
-            console.log(err, products);
+    readProducts: function(req, res){
+        db.read_products( function(err, products){
+            res.status(200).send(products);
         })
     }
 }
 
+//Get one item
+module.exports.readProduct = function(req, res){
+  db.read_product([itemid], function(err, product){
+    res.status(200).send(product);
+  })
+}
+
 // Create Product
-module.exports.createProduct = function () {
-  db.create_product([], function(err, productCreated) {
-    console.log(err, productCreated);
+module.exports.createProduct = function (req, res) {
+  db.create_product(req.body.data, function(err, productCreated) {
+    res.status(200).send(err, 'Product was created!');
   })
 }
 
 //Update product
-module.exports.updateProduct = function () {
+module.exports.updateProduct = function (req, res) {
   db.update_product([], function (err, productUpdated) {
-    console.log(err, productUpdated);
+    res.status(200).send(err, 'Product was updated!');
+
   })
 }
 
 // Delete Product
-module.exports.deleteProduct = function () {
+module.exports.deleteProduct = function (req, res) {
   db.delete_product([],function (err, productDeleted) {
-    console.log(err, productDeleted);
+    res.status(200).send(err, 'Product was deleted');
   })
 }
