@@ -5,13 +5,14 @@ body {
   background-color: #fff;
 
 }
-nav {
-  background-color: transparent);
+#nav-one {
+  background-color: transparent;
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   position: fixed;
+  top: 0;
   padding-top: 20px;
   padding-bottom: 20px;
 }
