@@ -1,4 +1,5 @@
-angular.module('mars-bags').controller('mainCtrl', function ($scope, $stateParams, mainService, $state) {
+angular.module('mars-bags').controller('productDescriptionCtrl', function ($scope, $stateParams, mainService, $state) {
+
   // Get all products
   $scope.getProductInfo = function () {
     mainService.getProducts().then(function (response) {
@@ -20,18 +21,5 @@ angular.module('mars-bags').controller('mainCtrl', function ($scope, $stateParam
       console.log("itemid Object", $scope.itemById);
     });
   }
-
-  // add to cart buttons.
-
-  $scope.showCart = false;
-
-  $scope.addToCart = function () {
-    console.log('test', $scope.showCart)
-    $scope.showCart = !$scope.showCart;
-  }
-
-  $scope.getCart = function () {
-    console.log('am i running')
-    return $scope.showCart
-  }
+  $scope.getProduct($stateParams.id);
 })

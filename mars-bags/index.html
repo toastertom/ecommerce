@@ -2,37 +2,26 @@
 <html ng-app="mars-bags">
   <head>
     <meta charset="utf-8">
-     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 
     <title>Mars Bags</title>
 
+  <!-- Angular -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="public/styles/navBarStyles.css">
   <link rel="stylesheet" href="public/styles/footerStyle.css">
   <link rel="stylesheet" href="public/styles/homeStyle.css">
   <link rel="stylesheet" href="public/styles/shopStyle.css">
-    <link rel="stylesheet" href="public/styles/aboutStyle.css">
+  <link rel="stylesheet" href="public/styles/aboutStyle.css">
+  <link rel="stylesheet" href="public/styles/productDescriptionStyles.css">
   </head>
 
   <body>
-    <!-- Header -->
-    <!-- <nav class="nav-bar">
-        <div id="logo"><a ui-sref="home">Logo</a></div>
-        <div id="links">
-          <ul>
-            <li><a ui-sref="shop">Shop</a></li>
-            <li><a ui-sref="about">About Us</a></li>
-            <li><a ui-sref="news-events">News &amp Events</a></li>
-            <li><a ui-sref="charity-water">Charity Water</a></li>
-            <li><button id="contact-box" ui-sref="contact-us">Contact Us</button></li>
-          </ul>
-        </div>
-    </nav> -->
 
     <!-- Content -->
 
     <ui-view></ui-view>
-
 
 
     <!-- Footer -->
@@ -44,9 +33,9 @@
           <li><a ui-sref="about">About The Company</a></li>
         </ul>
         <ul>
-          <li><a ui-sref="news-events">News &amp Events</a></li>
+          <li><a ui-sref="news-events">News & Events</a></li>
           <li><a ui-sref="charity-water">Charity Water</a></li>
-          <li><a ui-sref="terms-conditions">Terms &amp Conditions</a></li>
+          <li><a ui-sref="terms-conditions">Terms & Conditions</a></li>
         </ul>
       </div>
 
@@ -56,10 +45,23 @@
       </div>
     </footer>
 
+  <!-- UI Router -->
   <script src="
     https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+
+
   <script src="public/js/app.js"></script>
+
+  <!-- Controllers -->
   <script src="public/js/controllers/mainCtrl.js"></script>
+
+  <script src="public/js/controllers/productDescriptionCtrl.js"></script>
+
+  <!-- Services -->
   <script src="public/js/services/mainService.js"></script>
+
+  <!-- Directives -->
+  <script src="public/js/directives/navbar-scroll.js"></script>
+
   </body>
 </html>

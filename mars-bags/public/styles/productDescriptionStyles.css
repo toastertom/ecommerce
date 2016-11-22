@@ -1,0 +1,9 @@
+#item-container {
+  margin:10px;
+  display: flex;
+  justify-content: center;
+}
+
+#item-container p{
+  width: 50%;
+}

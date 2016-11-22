@@ -12,7 +12,9 @@ module.exports = {
 
 //Get one item
 module.exports.readProduct = function(req, res){
+  var itemid = req.params.id;
   db.read_product([itemid], function(err, product){
+    console.log('dbCtrl',product);
     res.status(200).send(product);
   })
 }
@@ -20,14 +22,14 @@ module.exports.readProduct = function(req, res){
 // Create Product
 module.exports.createProduct = function (req, res) {
   db.create_product(req.body.data, function(err, productCreated) {
-    res.status(200).send(err, 'Product was created!');
+    res.status(200).send('Product was created!');
   })
 }
 
 //Update product
 module.exports.updateProduct = function (req, res) {
   db.update_product([], function (err, productUpdated) {
-    res.status(200).send(err, 'Product was updated!');
+    res.status(200).send('Product was updated!');
 
   })
 }

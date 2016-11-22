@@ -29,7 +29,7 @@ app.set('db', massiveInstance);
 var dbCtrl = require('./server/controllers/dbCtrl');
 //db read all products endpoints
 app.get('/api/products', dbCtrl.readProducts);
-// app.get('/api/product', dbCtrl.readProduct);
+app.get('/api/product/:id', dbCtrl.readProduct);
 // app.get('/api/products/create', dbCtrl.createProduct);
 // app.get('/api/products/update', dbCtrl.updateProduct);
 // app.get('/api/products/delete', dbCtrl.deleteProduct);

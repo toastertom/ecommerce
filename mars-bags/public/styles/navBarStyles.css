@@ -3,19 +3,31 @@ body {
   margin: 0px;
   width: 100%;
   background-color: #fff;
-
 }
-#nav-one {
+
+.nav-one {
   background-color: transparent;
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: fixed;
+  position: absolute;
   top: 0;
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
+#nav-two {
+  background-color: #201A16;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  top: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 #logo {
   width: 300px;
   height: 80px;
@@ -56,4 +68,16 @@ a:hover {
 #contact-box:hover {
   background: #fff;
   color: rgba(32, 26, 22, 0.9);
+}
+
+.scroll-navbar {
+  background-color: #201A16;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  top: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: fixed;
 }

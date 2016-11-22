@@ -1,4 +1,4 @@
-<nav class="nav-one" scroll>
+<nav id="nav-two">
     <div id="logo"><a ui-sref="home">Logo</a></div>
     <div id="links">
       <ul>
@@ -11,36 +11,39 @@
     </div>
 </nav>
 
-<div id="jumbo">
-  <div id="jumbo-container">
-  <h3>Mars Bags</h3>
-  <h1>Don't let a little water hold<br> you back.</h1>
-  <button id="shop-button" ui-sref="shop">Shop Collection</button>
-  </div>
+<div id="item-container">
+<div>
+  {{itemById.imageURL}}
 </div>
+<div>
+  <h2>{{itemById.name}}</h2>
+  <p>{{itemById.description}}</p>
+  <div id="price">${{itemById.price}}</div>
+  <div id="qty-label">Quantity:</div>
+  <input value="1" min="1" max="999" step="1" type="number"></input>
+
+  <br/>
+  <button id="add-product">ADD TO CART</button>
+</div>
+</div>
+
 
 <div class="container">
   <div id="card" ng-repeat="product in products">
-    <!-- <div>
-    <a ui-sref="product-description">{{item.imageURL}}</a>
-    </div> -->
+    <div>
+  {{item.imageURL}}
+    </div>
     <div>
       <h2>
         <a ui-sref="product-description({id: product.itemid})">{{product.name}}</a>
       </h2>
-      <!-- <p>{{product.description}}</p> -->
       <div id="price">${{product.price}}</div>
       <div id="qty-label">Quantity:</div>
       <input value="1" min="1" max="999" step="1" type="number"></input>
 
       <br/>
-      <button ng-click="addToCart()" id="add-product">ADD TO CART</button>
+      <button id="add-product">ADD TO CART</button>
 
     </div>
   </div>
-
-  <div ng-show="getCart()" id="btn-container">
-    <div id="cart-icon"></div>
-    <div id="cart-count">{{}} Items</div>
-    <div id="cart-total"></div>
-  </div>
+</div>
