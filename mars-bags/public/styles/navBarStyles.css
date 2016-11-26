@@ -1,5 +1,8 @@
 body {
-  font-family: helvetica neue;
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  /*font-family: helvetica neue;*/
   margin: 0px;
   width: 100%;
   background-color: #fff;
@@ -29,11 +32,9 @@ body {
 }
 
 #logo {
-  width: 300px;
-  height: 80px;
-  background-color: transparent;;
+  width: 150px;
+  height: 100px;
   color: #fff;
-
 }
 #links {
   align-items: center;
