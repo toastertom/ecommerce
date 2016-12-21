@@ -1,0 +1,61 @@
+<nav id="nav-two">
+  <div>
+    <a ui-sref="home">
+      <img src="public/images/white-logo.png" id="logo"></img>
+    </a>
+  </div>
+    <div id="links">
+      <ul>
+        <li><a ui-sref="shop">Shop</a></li>
+        <li><a ui-sref="about">About Us</a></li>
+        <li><a ui-sref="news-events">News & Events</a></li>
+        <li><a ui-sref="charity-water">Charity Water</a></li>
+        <li><button id="contact-box" ui-sref="contact-us">Contact Us</button></li>
+      </ul>
+    </div>
+
+    <ngcart-summary></ngcart-summary>
+
+</nav>
+
+<div id="item-container">
+  <div>
+    <img id="main-img" src="{{itemById.imageurl}}"></img>
+  </div>
+<div>
+  <h1>{{itemById.name}}</h1>
+  <p>{{itemById.description}}</p>
+  <!-- <div id="price">${{itemById.price}}</div>
+  <div id="qty-label">Quantity:</div>
+
+  <ngcart-addtocart class="add-to-cart" id="{{ itemById.itemid }}" name="{{itemById.name}}" price="{{itemById.price}}" quantity="1" quantity-max="30" data="">ADD TO CART</ngcart-addtocart> -->
+
+
+  <br/>
+ 
+</div>
+</div>
+
+
+<div class="container">
+  <div id="card" ng-repeat="product in products">
+    <div>
+      <a ui-sref="product-description({id: product.itemid})">
+        <img src="{{product.imageurl}}"></img>
+      </a>
+    </div>
+    <div>
+      <h2>
+        <a ui-sref="product-description({id: product.itemid})">{{product.name}}</a>
+      </h2>
+      <div id="price">${{product.price}}</div>
+      <div id="qty-label">Quantity:</div>
+
+      <br/>
+
+
+      <ngcart-addtocart class="add-to-cart" id="{{ product.itemid }}" name="{{ product.name }}" price="{{ product.price }}" quantity="1" quantity-max="30" data="">ADD TO CART</ngcart-addtocart>
+
+    </div>
+  </div>
+</div>

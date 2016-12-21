@@ -1,0 +1,29 @@
+main {
+  background-color: #fff;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 10px;
+
+}
+
+.form-container {
+  background-color: #fff;
+  width: 40%;
+}
+
+.user-name {
+  width: 100%;
+}
+
+.user-info {
+  width: 100%;
+}
+
+.form-container select {
+  width: 160px;
+  margin: 10px;
+}

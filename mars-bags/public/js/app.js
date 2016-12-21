@@ -1,5 +1,4 @@
-angular.module('mars-bags', ['ui.router'])
-    .config(function ($stateProvider, $urlRouterProvider) {
+angular.module('mars-bags', ['ui.router', 'ngCart']).config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('home', {
                 url:'/',
@@ -7,9 +6,9 @@ angular.module('mars-bags', ['ui.router'])
                 controller:'mainCtrl'
             })
             .state('shop', {
-              url:'/shop',
-
-              templateUrl: "public/views/shopTpl.html"
+              url:'/product-description/',
+              templateUrl:'public/views/shopTpl.html',
+              controller:'mainCtrl'
             })
             .state('about', {
               url:'/about',
@@ -26,11 +25,6 @@ angular.module('mars-bags', ['ui.router'])
 
               templateUrl: "public/views/news-eventsTpl.html"
             })
-            .state('checkout', {
-              url:'/checkout',
-
-              templateUrl: "public/views/checkoutTpl.html"
-            })
             .state('terms-conditions', {
               url:'/terms-conditions',
 
@@ -43,8 +37,18 @@ angular.module('mars-bags', ['ui.router'])
             })
             .state('product-description', {
               url:'/product-description/:id',
-              templateUrl:'public/views/productViews/productDescriptionTpl.html',
+              templateUrl:'public/views/productDescriptionTpl.html',
               controller:'productDescriptionCtrl'
+            })
+            .state('cart', {
+              url:'/cart',
+              templateUrl: "public/views/cartTpl.html",
+              controller: 'checkoutCtrl'
+            })
+            .state('checkout', {
+              url:'/checkout',
+              templateUrl: "public/views/checkoutTpl.html",
+              controller: 'checkoutCtrl'
             })
 
           $urlRouterProvider

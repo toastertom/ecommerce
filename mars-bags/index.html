@@ -8,6 +8,9 @@
   <!-- Angular -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
 
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 
@@ -15,17 +18,22 @@
   <link rel="stylesheet" href="public/styles/navBarStyles.css">
   <link rel="stylesheet" href="public/styles/footerStyle.css">
   <link rel="stylesheet" href="public/styles/homeStyle.css">
+  <link rel="stylesheet" href="public/styles/news-eventsStyles.css">
   <link rel="stylesheet" href="public/styles/shopStyle.css">
+  <link rel="stylesheet" href="public/styles/cartStyles.css">
   <link rel="stylesheet" href="public/styles/aboutStyle.css">
   <link rel="stylesheet" href="public/styles/productDescriptionStyles.css">
+  <link rel="stylesheet" href="public/styles/checkoutStyle.css">
   </head>
 
   <body>
 
     <!-- Content -->
+    <main>
 
     <ui-view></ui-view>
 
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -60,11 +68,20 @@
 
   <script src="public/js/controllers/productDescriptionCtrl.js"></script>
 
+  <script src="public/js/controllers/checkoutCtrl.js"></script>
+
   <!-- Services -->
   <script src="public/js/services/mainService.js"></script>
 
   <!-- Directives -->
   <script src="public/js/directives/navbar-scroll.js"></script>
 
+  <!-- 'ngCart' -->
+  <script src="public/js/bower_components/ngCart/dist/ngCart.js"></script>
+
+  <!-- Stripe -->
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+
   </body>
+
 </html>

@@ -5,7 +5,9 @@ body {
   /*font-family: helvetica neue;*/
   margin: 0px;
   width: 100%;
-  background-color: #fff;
+  background-color: #201A16;
+  min-height: 100vh;
+  position: relative;
 }
 
 .nav-one {
@@ -38,10 +40,11 @@ body {
 }
 #links {
   align-items: center;
-
 }
 ul {
   list-style-type: none;
+  padding-left: 0px;
+
 }
 ul li {
   display: inline;
@@ -81,4 +84,12 @@ a:hover {
   padding-top: 20px;
   padding-bottom: 20px;
   position: fixed;
+}
+
+.summary {
+  color: #fff;
+}
+
+.summary-totals a {
+  color: inherit;
 }

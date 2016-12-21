@@ -45,6 +45,7 @@ font-size: 80px;
 .container {
   background-color: #fff;
   width: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
   align-content: space-around;
@@ -75,7 +76,7 @@ input {
   font-size: 100%;
 }
 
-#add-product {
+.add-product {
   margin: 10px;
   padding: 12px 50px;
   background-color: rgb(17, 16, 15);
@@ -83,8 +84,12 @@ input {
   border: none;
 }
 
-#add-product:hover {
+.add-product:hover {
 opacity: 0.7;
+}
+
+.add-product-container {
+  margin-left: 10px;
 }
 
 #btn-container {
@@ -105,9 +110,10 @@ opacity: 0.7;
 
 #cart-icon {
   background: transparent;
-  width: 18px;
-  height: 18px;
+  width: 35px;
+  height: 35px;
   border: none;
+  padding: none;
   background: url("../images/cart.png") no-repeat center center;
   background-size: cover;
 
@@ -126,4 +132,26 @@ opacity: 0.7;
 #cart-total {
   background: transparent;
   color: #fff;
+}
+
+.block-container {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.link-block-left {
+  background: url("/public/images/splash.jpg") no-repeat right ;
+  width: 550px;
+  height: 200px;
+  background-size: cover;
+}
+
+.link-block-right {
+  background: url("/public/images/sea-nature-sunny-beach.jpg")no-repeat;
+  background-size: cover;
+  width: 550px;
+  height: 200px;
 }

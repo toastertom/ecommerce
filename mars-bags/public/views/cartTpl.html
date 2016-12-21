@@ -1,0 +1,46 @@
+<nav id="nav-two">
+  <div>
+    <a ui-sref="home">
+      <img src="public/images/white-logo.png" id="logo"></img>
+    </a>
+  </div>
+    <div id="links">
+      <ul>
+        <li><a ui-sref="shop">Shop</a></li>
+        <li><a ui-sref="about">About Us</a></li>
+        <li><a ui-sref="news-events">News & Events</a></li>
+        <li><a ui-sref="charity-water">Charity Water</a></li>
+        <li><button id="contact-box" ui-sref="contact-us">Contact Us</button></li>
+      </ul>
+    </div>
+
+    <ngcart-summary></ngcart-summary>
+
+</nav>
+
+<div class="cart-container">
+
+<ngcart-cart></ngcart-cart>
+
+</div>
+
+<div class="cart-btn-contianer">
+<button class="add-product" ui-sref="checkout"> Proceed To Checkout</button>
+</div>
+
+<!-- <div class="cart-btn-contianer"> -->
+
+  <!-- Stripe Checkout -->
+  <!-- does not work with UI Router  -->
+  <!-- <form action="/charge/" method="POST">
+    Submit
+    <script
+      src="https://checkout.stripe.com/checkout.js"
+      class="stripe-button"
+      data-key="pk_test_5Jb8j96tOj2VsndWjLfEGWvJ"
+      data-amount="{{ngCart.totalCost()}}"
+      data-name="marsbags.com">
+    </script>
+  </form>
+
+</div> -->

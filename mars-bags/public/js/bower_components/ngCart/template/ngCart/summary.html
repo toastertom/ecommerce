@@ -1,0 +1,17 @@
+<div class="row summary">
+    <div class="col-md-4 text-right">
+
+      <a ui-sref="cart">
+        <div id="cart-icon"></div>
+      </a>
+
+    </div>
+
+    <div class="col-md-7 summary-totals">
+      <a ui-sref="cart">
+      {{ ngCart.getTotalItems() }}
+        <ng-pluralize count="ngCart.getTotalItems()" when="{1: 'item', 'other':'items'}"></ng-pluralize>
+        <br />{{ ngCart.totalCost() | currency }}
+      </a>
+    </div>
+</div>

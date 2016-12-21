@@ -8,9 +8,37 @@
       <ul>
         <li><a ui-sref="shop">Shop</a></li>
         <li><a ui-sref="about">About Us</a></li>
-        <li><a ui-sref="news-events">News &amp Events</a></li>
+        <li><a ui-sref="news-events">News & Events</a></li>
         <li><a ui-sref="charity-water">Charity Water</a></li>
         <li><button id="contact-box" ui-sref="contact-us">Contact Us</button></li>
       </ul>
     </div>
+
+    <ngcart-summary></ngcart-summary>
+
 </nav>
+<!-- Showcase Products -->
+<div class="container">
+  <div id="card" ng-repeat="product in products">
+    <div>
+      <a ui-sref="product-description({id: product.itemid})">
+        <img src="{{product.imageurl}}"></img>
+      </a>
+    </div>
+    <div>
+      <h2>
+        <a ui-sref="product-description({id: product.itemid})">{{product.name}}</a>
+      </h2>
+      <!-- <p>{{product.description}}</p> -->
+      <div id="price">${{product.price}}</div>
+      <div id="qty-label">Quantity:</div>
+
+
+
+      <br/>
+
+
+      <ngcart-addtocart  id="{{ product.itemid }}" name="{{ product.name }}" price="{{ product.price }}" quantity="1" quantity-max="30" data="">ADD TO CART</ngcart-addtocart>
+
+    </div>
+  </div>
