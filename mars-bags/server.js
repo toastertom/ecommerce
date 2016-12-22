@@ -9,13 +9,15 @@ var config = require('./server/config');
 var massive = require('massive');
 var stripe = require('stripe')("sk_test_VphG8qpl0LmsxQ5qvZuE241Z"); //secretkey
 
-var oAuthFbCtrl = require('./server/controllers/oAuthFbCtrl');
+// var oAuthFbCtrl = require('./server/controllers/oAuthFbCtrl');
 
 //for oAuth will uncomment later
 // app.use(session({secret: config.sessionPassword}));
 
 // Connection to postgres db.
-var connectionString = 'postgres://postgres:'+ config.PgPassword +'@localhost:'+ config.dbPort +'/Mars Bags';
+// var connectionString = 'postgres://postgres:'+ config.PgPassword +'@localhost:'+ config.dbPort +'/Mars Bags';
+
+var connectionString = process.env.HEROKU_POSTGRESQL_COBALT_URL;
 
 // Middleware //Initializing bodyParser, cors, passport & session.
 app.use(bodyParser.json());
