@@ -8,6 +8,7 @@ var FacebookStrategy = require('passport-facebook').Strategy;
 var config = require('./server/config');
 var massive = require('massive');
 var stripe = require('stripe')("sk_test_VphG8qpl0LmsxQ5qvZuE241Z"); //secretkey
+var port = process.env.PORT || 3003;
 
 // var oAuthFbCtrl = require('./server/controllers/oAuthFbCtrl');
 
@@ -63,6 +64,6 @@ app.get('/api/product/:id', dbCtrl.readProduct);
 // app.get('/api/products/delete', dbCtrl.deleteProduct);
 
 
-app.listen( config.nodePort, function(){
+app.listen( port, function(){
   console.log("Successfully listening");
 });
